@@ -17,7 +17,6 @@ app.listen(config.app.port, function () {
 });
 
 
-console.log('++++++++++++');
 Promise.resolve()
   .then(() => {
     app.use('/api', require('./api/index.js'));

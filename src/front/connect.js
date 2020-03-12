@@ -1,6 +1,14 @@
 import { connect } from 'react-redux';
 import { actions as actionCreators } from './reducers';
-// import { handleIssuesSearch } from './features/issues/issuesSlice';
+import {
+  handleNewGame, handleRound, handleResetGame, handleGetGame,
+} from './features/game/gameSlice';
 
 export default (mapStateToProps) => (Component) => connect(mapStateToProps,
-  { ...actionCreators/* , handleIssuesSearch */ })(Component);
+  {
+    ...actionCreators,
+    handleNewGame,
+    handleRound,
+    handleResetGame,
+    handleGetGame,
+  })(Component);
